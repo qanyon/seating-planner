@@ -1,8 +1,11 @@
 import Vue from 'vue'
-import App from './App.vue'
+import Container from "./Container";
+import App from "./App";
 
-Vue.config.productionTip = false
+// Without options
+Vue.use(Container);
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+    el: '#app',
+    render: h => h(App)
+});

@@ -1,28 +1,45 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app">
+        <container v-model="data"></container>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+    import Container from "./Container.vue";
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+    export default {
+        name: 'App',
+        data() {
+            return {
+                data: [
+                    {
+                        id: 1,
+                        coordinates: [0.5, 0.5],
+                        size: [0.10, 0.15],
+                        orientation: 0,
+                        label: "This is table with ID: 1",
+                        seats: [
+                            {
+                                id: 1,
+                                orientation: 0,
+                                coordinates: [0.6, 0.6],
+                                size: [0.010, 0.015],
+                                label: "This is seat with ID: 1",
+                            },
+                            {
+                                id: 1,
+                                orientation: 0,
+                                coordinates: [0.5, 0.6],
+                                size: [0.010, 0.015],
+                                label: "This is seat with ID: 1",
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        components: {
+            Container,
+        },
+    }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
