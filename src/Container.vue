@@ -1,21 +1,11 @@
 <template>
     <div class="seating-container" id="seating-container">
+
         <div v-for="(table,tableIndex) in layout">
             <seating-table v-model="layout[tableIndex]">
             </seating-table>
-
-            <div v-for="(seat,seatIndex) in layout[tableIndex].seats">
-                <seating-seat v-model="layout[tableIndex].seats[seatIndex]"
-                ></seating-seat>
-            </div>
-
-
         </div>
-
-
-
     </div>
-
 </template>
 <script>
 

@@ -1,6 +1,6 @@
 {
   "name": "seatingplanner",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "main": "dist/simplealertcomponent.umd.js",
   "module": "dist/simplealertcomponent.esm.js",
@@ -67,7 +67,6 @@
     "last 2 versions"
   ],
   "dependencies": {
-    "timers": "latest",
     "vue-moveable": "^0.3.0"
   }
 }
