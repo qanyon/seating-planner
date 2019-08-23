@@ -9,13 +9,11 @@
 </template>
 <script>
 
-    import SeatingTable from './SeatingTable'
-    import SeatingSeat from "./SeatingSeat";
+    import SeatingTable from './SeatingTable.vue'
 
     export default {
         name: "Container",
         components: {
-            SeatingSeat,
             SeatingTable,
         },
         props: ['value'],

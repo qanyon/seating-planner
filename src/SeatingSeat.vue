@@ -13,14 +13,12 @@
             v-bind:style="{ left: left + 'px', top: top + 'px', transform: seat.orientation, width: width + 'px', height: height + 'px' }"
     >
         <slot>
-            <img src="../assets/img/download.png" alt="seat" :width=" width + 'px'" :height="height + 'px' ">
             <span>{{ seat.label }}</span>
         </slot>
     </Moveable>
 </template>
 <script>
     import Moveable from 'vue-moveable';
-
     export default {
         name: "SeatingSeat",
         components: {

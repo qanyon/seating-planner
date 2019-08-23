@@ -27,7 +27,7 @@
 </template>
 <script>
     import Moveable from 'vue-moveable';
-    import SeatingSeat from "./SeatingSeat";
+    import SeatingSeat from "./SeatingSeat.vue";
 
     export default {
         name: "SeatingTable",

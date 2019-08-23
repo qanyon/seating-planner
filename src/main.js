@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import Container from "./Container";
-import App from "./App";
+import Container from "./Container.vue";
+import App from "./App.vue";
 
 // Without options
 Vue.use(Container);
