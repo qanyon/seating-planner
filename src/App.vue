@@ -1,11 +1,11 @@
 <template>
     <div id="app">
-        <container v-model="data"></container>
+        <seating-container v-model="data"></seating-container>
     </div>
 </template>
 
 <script>
-    import Container from "./Container.vue";
+    import SeatingContainer from "./SeatingContainer";
 
     export default {
         name: 'App',
@@ -54,7 +54,7 @@
             }
         },
         components: {
-            Container,
+            SeatingContainer,
         },
     }
 </script>

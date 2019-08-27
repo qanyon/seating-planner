@@ -12,7 +12,7 @@
     import SeatingTable from './SeatingTable.vue'
 
     export default {
-        name: "Container",
+        name: "SeatingContainer",
         components: {
             SeatingTable,
         },
