@@ -5,7 +5,6 @@ import replace from "rollup-plugin-replace";
 import uglify from "rollup-plugin-uglify";
 import builtins from "rollup-plugin-node-builtins";
 import minimist from "minimist";
-import image from 'rollup-plugin-image';
 
 const argv = minimist(process.argv.slice(2));
 
@@ -16,7 +15,6 @@ const config = {
         exports: "named"
     },
     plugins: [
-        image(),
         replace({
             "process.env.NODE_ENV": JSON.stringify("production")
         }),
