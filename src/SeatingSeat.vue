@@ -17,6 +17,7 @@
             <span>{{ seat.label }}</span>
         </slot>
     </Moveable>
+
 </template>
 <script>
     import Moveable from 'vue-moveable';
@@ -82,11 +83,6 @@
         created: function () {
             this.$parent.$on('update', this.updateTarget);
         },
-        watch: {
-            value: function (newValue, oldValue) {
-
-            }
-        },
     };
 </script>
 <style>
@@ -99,5 +95,6 @@
     .seat {
         background-color: lawngreen;
     }
+
 
 </style>
