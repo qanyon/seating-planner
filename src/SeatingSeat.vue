@@ -2,6 +2,7 @@
     <Moveable
             target="seating-container"
             :id="'seat-' + seat.id"
+            ref="seat"
             class="moveable seat "
             :draggable="true"
             :scalable="true"
@@ -19,6 +20,7 @@
 </template>
 <script>
     import Moveable from 'vue-moveable';
+
     export default {
         name: "SeatingSeat",
         components: {
@@ -43,6 +45,7 @@
         data() {
             return {
                 seat: {},
+                target: {},
             }
         },
         methods: {
@@ -50,24 +53,34 @@
                 this.$emit('input', this.seat);
             },
             handleDrag({target, left, top}) {
+                this.target = target;
                 let parentWidth = document.body.offsetWidth;
                 let parentHeight = document.body.offsetHeight;
                 this.seat.coordinates = [((top) / parentHeight), ((left) / parentWidth)];
                 this.seatUpdated();
             },
             handleScale({target, transform, scale}) {
+                this.target = target;
+
                 target.style.transform = "scale(" + scale[0] + ")";
                 this.seatUpdated();
             },
             handleRotate({target, dist, transform}) {
+                this.target = target;
                 target.style.transform = transform;
                 this.seat.orientation = transform;
                 this.seatUpdated();
 
             },
+            updateTarget() {
+                let target = this.$refs.seat.updateRec();
+            }
         },
         mounted() {
             this.seat = this.value;
+        },
+        created: function () {
+            this.$parent.$on('update', this.updateTarget);
         },
         watch: {
             value: function (newValue, oldValue) {

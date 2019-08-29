@@ -1,6 +1,6 @@
 {
   "name": "seating-planner",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "private": false,
   "main": "dist/seatingplanner.umd.js",
   "module": "",
@@ -68,6 +68,7 @@
     "last 2 versions"
   ],
   "dependencies": {
+    "moveable": "^0.8.0",
     "vue-moveable": "^0.3.0"
   }
 }

@@ -58,6 +58,7 @@
         methods: {
             tableUpdated() {
                 this.$emit('input', this.table);
+                this.$emit('update');
             },
             handleDrag({target, left, top}) {
                 let parentWidth = document.body.offsetWidth;

@@ -1,9 +1,9 @@
 import Vue from 'vue'
-import Container from "./Container.vue";
+import SeatingContainer from "./SeatingContainer";
 import App from "./App.vue";
 
 // Without options
-Vue.use(Container);
+Vue.use(SeatingContainer);
 
 new Vue({
     el: '#app',
